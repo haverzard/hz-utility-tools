@@ -62,11 +62,7 @@ def main():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                CREDS[1],
-                SCOPES,
-                redirect_uri="https://developers.google.com/oauthplayground",
-            )
+            flow = InstalledAppFlow.from_client_secrets_file(CREDS[1], SCOPES)
             creds = flow.run_local_server(port=5000)
 
         # Save new creds
