@@ -1,0 +1,4 @@
+__pycache__/
+credentials.json
+creds.pickle
+api_creds.json
